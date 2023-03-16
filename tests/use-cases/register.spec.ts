@@ -1,9 +1,10 @@
 import { compare } from 'bcryptjs'
 import { expect, describe, it, beforeEach } from 'vitest'
 
-import { RegisterUseCase } from './register.usecase'
+import { RegisterUseCase } from '@/use-cases/register.usecase'
+import { UserAlreadyExistsError } from '@/use-cases/errors/user-already-exists.error'
+
 import { InMemoryUsersRepository } from 'tests/repositories/in-memory-users-repository'
-import { UserAlreadyExistsError } from './errors/user-already-exists.error'
 
 let usersRepository: InMemoryUsersRepository
 let sut: RegisterUseCase
