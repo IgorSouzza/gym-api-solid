@@ -24,6 +24,10 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
     return checkInOnSameDate
   }
 
+  async countByUserId(userId: string) {
+    return this.checkins.filter((checkIn) => checkIn.user_id === userId).length
+  }
+
   async findManyByUserId(userId: string, page: number) {
     return this.checkins
       .filter((checkIn) => checkIn.user_id === userId)
