@@ -7,7 +7,7 @@ type SearchGymUseCaseRequest = {
   page: number
 }
 
-type CreateGymUseCaseResponse = {
+type SearchGymCaseResponse = {
   gyms: Gym[]
 }
 
@@ -17,7 +17,7 @@ export class SearchGymUseCase {
   async execute({
     query,
     page,
-  }: SearchGymUseCaseRequest): Promise<CreateGymUseCaseResponse> {
+  }: SearchGymUseCaseRequest): Promise<SearchGymCaseResponse> {
     const gyms = await this.gymsRepository.searchMany(query, page)
 
     return { gyms }
