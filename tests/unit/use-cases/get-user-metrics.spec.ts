@@ -2,7 +2,7 @@ import { expect, describe, it, beforeEach } from 'vitest'
 
 import { GetUserMetricsUseCase } from '@/use-cases/get-user-metrics.usecase'
 
-import { InMemoryCheckInsRepository } from 'tests/repositories/in-memory-checkins-repository'
+import { InMemoryCheckInsRepository } from 'tests/unit/repositories/in-memory-checkins-repository'
 
 let checkInsRepository: InMemoryCheckInsRepository
 let sut: GetUserMetricsUseCase

@@ -4,7 +4,7 @@ import { ValidateCheckInUseCase } from '@/use-cases/validate-check-in.usecase'
 import { ResourceNotFoundError } from '@/use-cases/errors/resource-not-found.error'
 import { LateCheckInValidationError } from '@/use-cases/errors/late-check-in-validation.error'
 
-import { InMemoryCheckInsRepository } from 'tests/repositories/in-memory-checkins-repository'
+import { InMemoryCheckInsRepository } from 'tests/unit/repositories/in-memory-checkins-repository'
 
 let checkInsRepository: InMemoryCheckInsRepository
 let sut: ValidateCheckInUseCase

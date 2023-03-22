@@ -5,8 +5,8 @@ import { CheckInUseCase } from '@/use-cases/check-in.usecase'
 import { MaxDistanceError } from '@/use-cases/errors/max-distance.error'
 import { MaxNumberOfCheckInsError } from '@/use-cases/errors/max-number-of-check-ins.error'
 
-import { InMemoryGymsRepository } from 'tests/repositories/in-memory-gyms-repository'
-import { InMemoryCheckInsRepository } from 'tests/repositories/in-memory-checkins-repository'
+import { InMemoryGymsRepository } from 'tests/unit/repositories/in-memory-gyms-repository'
+import { InMemoryCheckInsRepository } from 'tests/unit/repositories/in-memory-checkins-repository'
 
 let checkInsRepository: InMemoryCheckInsRepository
 let gymsRepository: InMemoryGymsRepository

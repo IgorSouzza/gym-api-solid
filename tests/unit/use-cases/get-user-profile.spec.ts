@@ -4,7 +4,7 @@ import { expect, describe, it, beforeEach } from 'vitest'
 import { GetUserProfileUseCase } from '@/use-cases/get-user-profile.usecase'
 import { ResourceNotFoundError } from '@/use-cases/errors/resource-not-found.error'
 
-import { InMemoryUsersRepository } from 'tests/repositories/in-memory-users-repository'
+import { InMemoryUsersRepository } from 'tests/unit/repositories/in-memory-users-repository'
 
 let usersRepository: InMemoryUsersRepository
 let sut: GetUserProfileUseCase

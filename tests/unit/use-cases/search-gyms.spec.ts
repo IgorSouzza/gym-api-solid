@@ -2,7 +2,7 @@ import { expect, describe, it, beforeEach } from 'vitest'
 
 import { SearchGymUseCase } from '@/use-cases/search-gyms.usecase'
 
-import { InMemoryGymsRepository } from 'tests/repositories/in-memory-gyms-repository'
+import { InMemoryGymsRepository } from 'tests/unit/repositories/in-memory-gyms-repository'
 
 let gymsRepository: InMemoryGymsRepository
 let sut: SearchGymUseCase
