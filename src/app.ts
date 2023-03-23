@@ -1,4 +1,5 @@
 import fastifyJwt from '@fastify/jwt'
+import fastifyCookie from '@fastify/cookie'
 import fastify from 'fastify'
 import { ZodError } from 'zod'
 
@@ -13,8 +14,16 @@ app.register(usersRoutes)
 app.register(gymsRoutes)
 app.register(checkInsRoutes)
 
+app.register(fastifyCookie)
 app.register(fastifyJwt, {
   secret: env.JWT_SECRET,
+  cookie: {
+    cookieName: 'refreshToken',
+    signed: false,
+  },
+  sign: {
+    expiresIn: '10m',
+  },
 })
 
 app.setErrorHandler((error, _, reply) => {
